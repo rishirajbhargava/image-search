@@ -32,7 +32,6 @@ function Home() {
             setLoading(false)
             setHasMore(true)
         } catch (error) {
-
             setError(true)
             setLoading(false)
 
@@ -67,7 +66,7 @@ function Home() {
 
                 <>
 
-                    {!hasMore && <div className='info' >
+                    {(!hasMore && !error) && <div className='info' >
                         <p > A Project by Rishi Raj Bhargava</p>
                         <div>
 
@@ -87,18 +86,19 @@ function Home() {
                             {images.map((image) => {
                                 return (
 
-                                    <div className='image-container' key={image.id}>
+                                    <a href={image.urls.raw} className='image-container' key={image.id}>
                                         <div className='image'>
                                             <img src={image.urls.small} alt={image.alt_description} />
                                         </div>
                                         <div className='text'>
                                             <h2>{image.alt_description}</h2>
                                             <p>By: {image.user.name}</p>
-                                            <a href={image.urls.raw}>Download</a>
+                                            <span>Click to download.</span> 
+        
 
                                         </div>
 
-                                    </div>
+                                    </a>
 
                                 )
                             })

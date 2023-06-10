@@ -129,6 +129,37 @@ button:hover {
   opacity: 0;
 }
 
+.info{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom:30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 15px;
+}
+
+.info p{
+color:#ececec;
+font-size: 15px;
+font-weight: 500;
+margin-top: 13px;
+}
+
+.info div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+  margin-top: 5px;
+}
+
+.info a{
+  font-size: 19px;
+  color:#ececec;
+}
 
 
 .image-container:hover::before , .image-container:hover .text{
@@ -191,6 +222,54 @@ button:hover {
   font-size:16px;
   color:#fff;
   font-weight: 500;
+}
+
+
+@media screen and (max-width: 900px){
+  .results{
+    padding: 0 20px ;
+    grid-template-columns: 1fr 1fr;
+  }
+  .image-container{
+    height: 200px;
+  }
+}
+
+
+@media screen and (max-width: 600px){
+
+  .info{
+    margin-top:50px;
+    position: relative;
+  }
+.container{
+  padding: 15px;
+}
+  input{
+    width: 100%;
+    font-size: 15px;
+  }
+
+  input::placeholder{
+    font-size: 15px;
+  }
+
+  button{
+    font-size: 15px;
+  }
+  .image-container{
+    height: 160px;
+  }
+}
+@media screen and (max-width: 480px){
+  .image-container{
+    height: 130px;
+  }
+}
+@media screen and (max-width: 420px){
+  .image-container{
+    height: 120px;
+  }
 }
 
 

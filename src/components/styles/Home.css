@@ -21,8 +21,13 @@
     justify-content: center;
 }
 h1{
-    color: #d9d9d9;
+    color: #f6f6f6;
     margin-bottom: 20px;
+}
+h1 span {
+  background: -webkit-linear-gradient( #f28b32, #fa4926);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .container p {

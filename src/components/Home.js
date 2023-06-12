@@ -46,7 +46,7 @@ function Home() {
         <div className='home'>
 
             <div className='container'>
-                <h1>Image Search</h1>
+                <h1>Image <span>Search</span></h1>
                 <p>Powered by <img src={logo} alt='logo' /></p>
                 <form onSubmit={searchImages} >
                     <input type='text' name='query' required placeholder='Search for anything... ' onChange={handleChange} />
